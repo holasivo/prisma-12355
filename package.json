@@ -1,0 +1,24 @@
+{
+  "name": "prisma-12355",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --project ./",
+    "migrate": "prisma migrate reset",
+    "start": "ts-node ./src/index.ts",
+    "esbuild": "esbuild ./dist/index.js --bundle --platform=node --minify --outfile=./dist/index-esb.js",
+    "start:esb": "node ./dist/index-esb.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.11.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.27",
+    "prisma": "^3.11.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}

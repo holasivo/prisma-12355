@@ -1,0 +1,24 @@
+generator client {
+    provider      = "prisma-client-js"
+    binaryTargets = ["native", "linux-arm64-openssl-1.0.x"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Department {
+    id       String     @id @db.Uuid
+    name     String
+    Employee Employee[]
+}
+
+model Employee {
+    id            String @id @db.Uuid
+    department_id String @db.Uuid
+    name          String
+    title         String
+
+    department Department @relation(fields: [department_id], references: [id])
+}

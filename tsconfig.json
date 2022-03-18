@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "declarationMap": true,
+      "lib": ["es2019"],
+      "target": "es2019",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "isolatedModules": true,
+      "noImplicitAny": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "removeComments": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "resolveJsonModule": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "outDir": "dist",
+    },
+    "include": [ 
+      "src/**/*",
+    ],
+      "ts-node": {
+      "files": true
+    }
+  }
